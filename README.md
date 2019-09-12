@@ -2,3 +2,7 @@
 
 my experience in development React aplication
 
+to view:
+
+$ cd exempl
+$ npm start
