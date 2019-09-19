@@ -7,8 +7,11 @@ const Header = () => {
 
 const Search = () => {
     let SearchText = "Type Search";
-    return (
-        <input placeholder={SearchText} />
+    return ( 
+        <div className="form-group">
+            <label className="control-label" >Search</label>
+            <input className="form-control" id="disabledInput" type="text" placeholder={SearchText} disabled=""/>
+        </div>
     );
 }
 
@@ -23,7 +26,7 @@ const List = () => {
 }
 
 const el = (
-    <div>
+    <div className="container">
         <Header />
         <Search />
         <List />
