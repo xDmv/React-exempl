@@ -24,12 +24,11 @@ const Main = () => {
     return (
         <div className="container">
             <h1 style={ showHide }> List Example </h1>
-            <button className="btn btn-outline-success" onClick={ ReShown }>Ex</button>
             <Router>
-                {shown && <App />}
-                
+                { shown && <App /> }
                 <Route path="/notebook" component={ NotebookPage } />
             </Router>
+            <button className="btn btn-outline-success" onClick={ ReShown }>Clear</button>
         </div>
     );
 }
