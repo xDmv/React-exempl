@@ -1,37 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const Header = () => {
-    return <h1> Main page </h1>;
-};
+import App from './App';
+import NotebookPage from './pages/todo-list/index'
 
-const Search = () => {
-    let SearchText = "Type Search";
-    return ( 
-        <div className="form-group">
-            <label className="control-label" >Search</label>
-            <input className="form-control" id="disabledInput" type="text" placeholder={SearchText} disabled=""/>
+
+
+const Main = () => {
+    let shown = true;
+
+    const showHide = {
+      'display': shown ? 'block' : 'none'
+    };
+
+    const ReShown = () => {
+        console.log('shown == ', shown);
+        shown = !shown;
+
+        return showHide;
+    };
+
+    return (
+        <div className="container">
+            <h1 style={ showHide }> List Example </h1>
+            <button className="btn btn-outline-success" onClick={ ReShown }>Ex</button>
+            <Router>
+                {shown && <App />}
+                
+                <Route path="/notebook" component={ NotebookPage } />
+            </Router>
         </div>
     );
 }
 
-const List = () => {
-    return (
-        <ol>
-            <li>First App</li>
-            <li>Second App</li>
-            <li>Third App!</li>
-        </ol>
-    );
-}
-
-const el = (
-    <div className="container">
-        <Header />
-        <Search />
-        <List />
-    </div>
-);
-// const el = React.createElement('h1', null, 'New IT technology!');
-
-ReactDOM.render(el, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
