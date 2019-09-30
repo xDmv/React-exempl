@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Filter from '../filter/filter';
+
 const Search = () => {
     let SearchText = "Search example";
     return (
@@ -9,7 +11,8 @@ const Search = () => {
                 <div className="input-group mb-3">
                     <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)" placeholder={SearchText} />
                     <div className="input-group-append">
-                        <button className="btn btn-outline-success">Search</button>
+                        {/* <button className="btn btn-outline-success">Search</button> */}
+                        <Filter />
                     </div>
                 </div>
             </div>

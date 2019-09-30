@@ -4,6 +4,7 @@ import Header from '../header/header';
 import Search from '../search/search';
 import List from '../list/list-items';
 
+
 const NotebookPage = () => {
     return (
         <div>
