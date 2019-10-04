@@ -7,7 +7,7 @@ import List from '../list/list-items';
 
 const NotebookPage = () => {
     return (
-        <div>
+        <div class="container">
             <Header />
             <Search />
             <List />
