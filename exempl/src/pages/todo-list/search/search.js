@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Filter from '../filter/filter';
-import S
+// import S
 
 const Search = () => {
     let SearchText = "Search example";
