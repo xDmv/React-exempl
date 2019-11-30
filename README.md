@@ -1,8 +1,8 @@
 # react.js  version 16.9.0
 
-my experience in development React aplication
+## my experience in development React aplication
 
-to view:
+### to view:
 
 $ cd exempl
 <br>
